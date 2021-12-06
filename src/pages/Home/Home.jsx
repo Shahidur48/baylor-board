@@ -40,7 +40,7 @@ const Home = () => {
     axios.get(baseURL).then((response) => {
       setPost(response.data.events)
     })
-  }, [])
+  }, [baseURL])
 
   if (!events) return null
 

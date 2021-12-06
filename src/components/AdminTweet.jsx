@@ -15,7 +15,7 @@ class HomeComponent extends Component {
         super(props)
 
         this.handleScriptInject = this.handleScriptInject.bind(this);
-         var stompClient = null;
+        //  var stompClient = null;
 
 
         this.state = {
@@ -42,9 +42,9 @@ class HomeComponent extends Component {
 
 change(str)
 {
-    if(str.message=="a")
+    if(str.message==="a")
     {
-  axios.put( config.geturl() + 'tweets/' + str.name + '/' + 'status?status=ACCEPTED' );
+  axios.put( config.geturl() + 'tweets/' + str.name + '/status?status=ACCEPTED' );
 
    console.log("changed on Database")
 
@@ -52,9 +52,9 @@ change(str)
    document.getElementById(str.name).style.backgroundColor = "#008000";
 }
 
-if(str.message=="c")
+if(str.message==="c")
     {
-  axios.put( config.geturl() + 'tweets/' + str.name + '/' + 'status?status=PENDING' );
+  axios.put( config.geturl() + 'tweets/' + str.name + '/status?status=PENDING' );
 
    console.log("changed on Database")
 
@@ -153,7 +153,7 @@ send2(str)
             {/* Load the myExternalLib.js library. */}
             <Helmet
                 script={[{ src: "https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js" }]}
-                script={[{ src: "https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" }]}
+                // script={[{ src: "https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" }]}
                 // Helmet doesn't support `onload` in script objects so we have to hack in our own
                 
                 onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}
