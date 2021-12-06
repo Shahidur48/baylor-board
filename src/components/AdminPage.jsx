@@ -4,13 +4,6 @@ import EventService from '../services/EventService'
 import './res/grant.css'
 
 class ListEventComponent extends Component {
-    constructor(props) {
-        super(props)
-
-       
-    }
-
-   
     componentDidMount(){
         EventService.getEvent().then((res) => {
             this.setState({ event: res.data.events});

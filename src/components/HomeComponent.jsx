@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Row, Col, Card } from 'react-bootstrap'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import axios from 'axios'
 import { Carousel } from 'react-responsive-carousel'
@@ -37,7 +36,7 @@ class HomeComponent extends Component {
 
       for (let i = 0; i < this.state.tweets.length; i++) {
  
-  if(this.state.tweets[i].status == "ACCEPTED")
+  if(this.state.tweets[i].status === "ACCEPTED")
   {
     //console.log("happend")
     this.state.newtweets.push(this.state.tweets[i])
@@ -58,10 +57,10 @@ class HomeComponent extends Component {
         infiniteLoop='true'
       >
         <div>
-          <img src={Image} />
+          <img src={Image} alt=''/>
         </div>
         <div>
-          <img src={Image1} />
+          <img src={Image1} alt=''/>
         </div>
 
         <div>
@@ -151,7 +150,7 @@ class HomeComponent extends Component {
                       Event Description: {event.description}
                     </Card.Subtitle>
 
-                    <img src={event.images} style={{ height: '50% ' }}></img>
+                    <img src={event.images} style={{ height: '50% ' }} alt=''></img>
                   </Card.Body>
                 </Card>
               </Col>

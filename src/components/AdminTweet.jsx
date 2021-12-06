@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-import { Container, Row, Col, Card} from 'react-bootstrap'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import axios from 'axios'
-import { Carousel } from 'react-responsive-carousel';
-import Image from './la.jpg'
-import Image1 from './chicago.jpg'
 import Helmet from "react-helmet";
 import SockJsClient from 'react-stomp';
 import config from '../services/config';
-import SockJS from 'sockjs-client'
-import Stomp from 'stompjs'
 
 
 

@@ -24,7 +24,7 @@ const Home = () => {
 
   for (let i = 0; i < tweets.length; i++) {
  
-  if(tweets[i].status == "ACCEPTED")
+  if(tweets[i].status === "ACCEPTED")
   {
     console.log("happend")
     newtweets.push(tweets[i])

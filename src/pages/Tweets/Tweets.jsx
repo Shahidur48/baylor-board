@@ -15,14 +15,14 @@ const Tweets = () => {
   const { loading, error, tweets } = tweetList
   const newtweets = []
 
-  const redirect = '/login'
+  // const redirect = '/login'
 
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
 
 for (let i = 0; i < tweets.length; i++) {
  
-  if(tweets[i].status == "ACCEPTED")
+  if(tweets[i].status === "ACCEPTED")
   {
     console.log("happend")
     newtweets.push(tweets[i])

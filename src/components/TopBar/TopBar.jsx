@@ -5,11 +5,9 @@ import LoginIcon from '@mui/icons-material/Login'
 // import LogoutIcon from '@mui/icons-material/Logout';
 import './TopBar.scss'
 import { Link } from 'react-router-dom'
-import { MonetizationOn, Event } from '@material-ui/icons'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../actions/userActions'
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary'
 
 const TopBar = () => {
   const dispatch = useDispatch()
